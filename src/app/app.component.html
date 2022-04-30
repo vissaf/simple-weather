@@ -2,6 +2,7 @@
   <form #form="ngForm" (submit)="onSubmit()">
     <input type="text" placeholder="Search City" name="city" [(ngModel)]="cityName">
   </form>
+  <p *ngIf="isErrorMessage" class="error">Something went wrong!</p>
 </div>
 <div class="container" *ngIf="weatherData">
   <div class="upper-data">
@@ -58,5 +59,6 @@
     </div>
   </div>
 </div>
+
 
 <router-outlet></router-outlet>
